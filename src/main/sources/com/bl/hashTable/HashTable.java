@@ -1,7 +1,7 @@
 	package com.bl.hashTable;
 	
 	/**
-	 * Purpose  - To add values in Binary Search Tree and check whether 63 is present.
+	 * Purpose  - To Removing word in HashMap
 	 * @author  - JaswinderSingh
 	 * @version - 16.0
 	 * @since   - 30-09-2021
@@ -26,6 +26,7 @@
 	            	value = value + 1;
 	            hashTable.add(word, value);
 	        }
+	        hashTable.remove("avoidable");
 	        System.out.println(hashTable);
 	    }
 	}

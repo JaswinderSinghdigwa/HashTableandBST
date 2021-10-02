@@ -16,6 +16,22 @@
 	        for (int i = 0; i < Bucket; i++)
 	            this.ArrayOfBuckets.add(null);
 	    }
+	    // Method to remove a word
+	    public void remove(K key) {
+	        Node<K, V> currentNode = head;
+	        Node<K, V> previousNode = null;
+	        while (currentNode != null && currentNode.getKey().equals(key)) {
+	            head = currentNode.getNext();
+	        }
+	        while (currentNode != null && !(currentNode.getKey().equals(key))) {
+	            previousNode = currentNode;
+	            currentNode = currentNode.getNext();
+	        }
+	        if (currentNode != null)
+	            previousNode.next = currentNode.next;
+	        if (currentNode == null)
+	            System.out.println("Word not found");
+	    }
 	
 	    public void add(K key, V value) {
 	        Node<K, V> myNode = searchNode(key);
